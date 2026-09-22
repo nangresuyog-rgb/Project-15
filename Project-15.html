@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Events Demo</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        padding: 30px;
+      }
+
+      #box {
+        width: 250px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 20px auto;
+        padding: 30px;
+        cursor: pointer;
+      }
+
+      input {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+      }
+
+      #message {
+        font-size: 18px;
+        color: green;
+        margin: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript Events Demonstration</h1>
+
+    <p id="message">Interact with the page!</p>
+
+    <!-- MOUSE EVENTS -->
+    <h2>1. Mouse Events</h2>
+
+    <div
+      id="box"
+      onclick="mouseClick()"
+      onmouseover="mouseOver()"
+      onmouseout="mouseOut()"
+    >
+      Move Mouse Here
+    </div>
+
+    <!-- KEYBOARD EVENTS -->
+    <h2>2. Keyboard Events</h2>
+
+    <input
+      type="text"
+      id="keyboard"
+      placeholder="Type something"
+      onkeydown="keyDown()"
+      onkeyup="keyUp()"
+    />
+
+    <!-- FORM EVENTS -->
+    <h2 id="formevent">3. Form Events</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        onfocus="inputFocus()"
+        onblur="inputBlur()"
+      />
+
+      <br />
+
+      <input type="email" id="email" placeholder="Enter your email" />
+
+      <br />
+
+      <select id="course" onchange="courseChange()">
+        <option value="">Select Course</option>
+        <option value="BCA">BCA</option>
+        <option value="BSc">BSc</option>
+        <option value="BBA">BBA</option>
+      </select>
+
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="practical15.js"></script>
+  </body>
+</html>
